@@ -1,21 +1,20 @@
 ## Kate Kruger
 
-B2B revenue operator turned GTM engineer. I build the tooling that revenue teams keep rebuilding badly.
-
-Every project here shares one idea: **a GTM system should refuse to act on data it cannot verify.** Most of them cannot, which is why pipeline reports do not reconcile, why sending reputation collapses without warning, and why nobody notices until a board meeting.
+B2B revenue operator & builder on the side. I've worked alongside highly technical teams, and automate my job with shippable software to keep up.  
+Every project here shares one idea: **a GTM system should refuse to act on data it cannot verify.** Most of them cannot, which is why pipeline reports do not reconcile, why sending reputation collapses without warning, and why nobody notices until the CRM & data collapses pre board meeting.
 
 ### What I have shipped
 
 | Project | What it does | Status |
 |---|---|---|
-| [pipeline-waterfall](https://github.com/katekruger/pipeline-waterfall) | dbt package for the bookings and pipeline waterfall. Fails the build rather than reporting a bridge that does not tie out. | `0.1.0` |
-| [segment-mcp](https://github.com/katekruger/segment-mcp) | Read-first MCP server for Segment: which destinations get which events, which sources are dead, which are governed by nothing. Deletion is not exposed. | PyPI `0.1.1` |
-| [deliverability-guard](https://github.com/katekruger/deliverability-guard) | Sending circuit breaker for outbound email. Throttles or pauses before a domain burns, and refuses to trip on one bad day at n=1. | PyPI `0.1.0` |
-| [n8n-operator](https://github.com/katekruger/n8n-operator) | Governed MCP control plane for operating approved n8n workflows from Claude, OpenAI and Codex. Every run passes a human gate. | `v1.0.0-rc3` |
-| [instantly-mcp](https://github.com/katekruger/instantly-mcp) | MCP server for the Instantly v2 API. Every write is gated behind an explicit confirm, with code-enforced autonomy tiers and volume caps. | live |
-| [campaign-preflight](https://github.com/katekruger/campaign-preflight) | Read-only preflight for outbound campaigns: contacts, personalization, suppressions, schedules, sender readiness. CLI and MCP. | live |
-| [agent-audit](https://github.com/katekruger/agent-audit) | A portable record binding what an agent proposed, what a human decided, what executed, and what it cost. An OpenTelemetry semantic convention plus a thin emitter. | in build |
-| [awesome-gtm-engineering](https://github.com/katekruger/awesome-gtm-engineering) | Curated list of GTM engineering tools, with a written curation policy and a deterministic build. | live |
+| [segment-mcp](https://github.com/katekruger/segment-mcp) | Read-only MCP server for Segment. Which destinations get which events, which sources are dead. It cannot delete anything. | PyPI `0.1.3` |
+| [deliverability-guard](https://github.com/katekruger/deliverability-guard) | Circuit breaker for outbound email. Pauses sending before a domain burns, and will not panic over one bad day. | PyPI `0.1.0` |
+| [instantly-mcp](https://github.com/katekruger/instantly-mcp) | MCP server for the Instantly v2 API. Nothing sends without an explicit confirm. | PyPI `0.1.0` |
+| [pipeline-waterfall](https://github.com/katekruger/pipeline-waterfall) | dbt package for the bookings and pipeline waterfall. Fails the build instead of shipping a bridge that does not tie out. | `0.1.0` |
+| [n8n-operator](https://github.com/katekruger/n8n-operator) | Run approved n8n workflows from Claude, OpenAI or Codex. Every run passes a human gate. | `v1.0.0-rc3` |
+| [campaign-preflight](https://github.com/katekruger/campaign-preflight) | Checks an outbound campaign before it sends: suppressions, merge fields, schedules, sender health. It cannot launch anything. | 76 checks, unreleased |
+| [agent-audit](https://github.com/katekruger/agent-audit) | A record of what an agent proposed, what a human decided, and what actually ran. OpenTelemetry convention plus a small emitter. | in build |
+| [awesome-gtm-engineering](https://github.com/katekruger/awesome-gtm-engineering) | A list of GTM engineering tools, with a curation policy and a build that checks the links. | live |
 
 ### How I build
 
